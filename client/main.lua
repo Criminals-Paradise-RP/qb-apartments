@@ -272,7 +272,8 @@ local function EnterApartment(house, apartmentId, new)
                 ClosestHouse = house
                 RangDoorbell = nil
                 Wait(500)
-                TriggerEvent('qb-weathersync:client:DisableSync')
+                TriggerEvent('qb-weathersync:client:EnableSync') -- TEST THIS
+                -- TriggerEvent('qb-weathersync:client:DisableSync')
                 Wait(100)
                 TriggerServerEvent('qb-apartments:server:SetInsideMeta', house, apartmentId, true, false)
                 TriggerServerEvent("InteractSound_SV:PlayOnSource", "houses_door_close", 0.1)
@@ -294,7 +295,8 @@ local function EnterApartment(house, apartmentId, new)
             InApartment = true
             CurrentApartment = apartmentId
             Wait(500)
-            TriggerEvent('qb-weathersync:client:DisableSync')
+            TriggerEvent('qb-weathersync:client:EnableSync') -- TEST THIS
+            -- TriggerEvent('qb-weathersync:client:DisableSync')
             Wait(100)
             TriggerServerEvent('qb-apartments:server:SetInsideMeta', house, apartmentId, true, true)
             TriggerServerEvent("InteractSound_SV:PlayOnSource", "houses_door_close", 0.1)
